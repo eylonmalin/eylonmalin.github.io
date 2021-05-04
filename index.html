@@ -89,6 +89,34 @@
                 <img src="./assets/top_down_bottom_up.jpg">
             </section>
         </section>
+        <section>
+            <section>
+                <h3>Exercise 1 - small changes</h3>
+                <ul>
+                    <li><a href="https://github.com/eylonmalin/trunk-base-workshop/fork">fork trunk-base-workshop git</a></li>
+                    <li>checkout branch lesson1/exercise-1-start</li>
+                    <li>change the code so by default the user will get forecast of his current location</li>
+                    <li><b>commit and push little changes covered by tests</b></li>
+                    <li>choose strategy: <i style="font-style: italic !important">top-down</i> or <i style="font-style: italic !important">bottom-up</i></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Exercise 1 - some tips</h3>
+                <ul>
+                    <li>use openweathermap API for <a href="https://openweathermap.org/current#geo">weather</a> and
+                    <a href="https://openweathermap.org/forecast5#geo5">forecast</a>
+                    </li>
+                    <li>You might use the following frontend code for getting the user location:
+                        <pre><code data-trim data-noesacpe>
+function getCurrentLocation() {
+  return new Promise(function(resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+}
+                    </code></pre>
+                    </li>
+                </ul>
+        </section>
     </div>
 </div>
 
