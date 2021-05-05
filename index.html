@@ -69,7 +69,7 @@
                 <h3>Test come along with functionality</h3>
                 <br/>
                 <ul>
-                    <li>for any such small change we merge it's test as part of the changeset (Pull Request)</li>
+                    <li>For any such small change we merge it's test as part of the changeset (Pull Request)</li>
                     <li>Sometimes the test is just unit test/s and sometimes it include component or even end-to-end tests</li>
                 </ul>
             </section>
@@ -81,7 +81,7 @@
                     <li>Test is already there when functionality is done</li>
                     <li>Making sure test really test something<br>(failed when functionality is missing)</li>
                     <li>Declare method signature/API before coding it</li>
-                    <li>enabler for refactor</li>
+                    <li>Enabler for refactor</li>
                 </ul>
             </section>
             <section>
@@ -94,16 +94,16 @@
                 <h3>Exercise 1 - small changes</h3>
                 <ul>
                     <li><a href="https://github.com/eylonmalin/trunk-base-workshop/fork">fork trunk-base-workshop git</a></li>
-                    <li>checkout branch lesson1/exercise-1-start</li>
-                    <li>change the code so by default the user will get forecast of his current location</li>
-                    <li><b>commit and push little changes covered by tests</b></li>
-                    <li>choose strategy: <i style="font-style: italic !important">top-down</i> or <i style="font-style: italic !important">bottom-up</i></li>
+                    <li>Checkout branch lesson1/exercise-1-start</li>
+                    <li>Change the code so by default the user will get forecast of his current location</li>
+                    <li><b>Commit and push little changes covered by tests</b></li>
+                    <li>Choose strategy: <i style="font-style: italic !important">top-down</i> or <i style="font-style: italic !important">bottom-up</i></li>
                 </ul>
             </section>
             <section>
                 <h3>Exercise 1 - some tips</h3>
                 <ul>
-                    <li>use openweathermap API for <a href="https://openweathermap.org/current#geo">weather</a> and
+                    <li>Use openweathermap API for <a href="https://openweathermap.org/current#geo">weather</a> and
                     <a href="https://openweathermap.org/forecast5#geo5">forecast</a>
                     </li>
                     <li>You might use the following frontend code for getting the user location:
@@ -116,6 +116,45 @@ function getCurrentLocation() {
                     </code></pre>
                     </li>
                 </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Branch By Abstraction</h1>
+            </section>
+            <section>
+                <h3>Branch By Abstraction description</h3>
+                <p>
+                    "Branch by Abstraction" is a technique for making a large-scale change to a software system in
+                    gradual way that allows you to release the system regularly while the change is still in-progress.
+                </p>
+                <a href="https://martinfowler.com/bliki/BranchByAbstraction.html">Martin Fowler</a>
+            </section>
+            <section>
+                <h3>Branch By Abstraction step by step</h3>
+                <ul>
+                    <li>There is a piece of code you want to change, the code is consumed elsewhere in your system</li>
+                    <li>Create an abstraction of this code (e.g. extract an interface)</li>
+                    <li>Make the consumers of this code to consume the abstraction instead of concrete implementation</li>
+                    <li>Create the change you want to make as another implementation (supplier). Implement it in small steps</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Branch By Abstraction step by step - cont</h3>
+                <ul>
+                    <li>Once the new implementation is ready switch the system to use it (or use feature toggle)</li>
+                    <li>Clean leftover while needed (like removed previous implementation)</li>
+                </ul>
+                <p>
+                    <a href="https://martinfowler.com/bliki/BranchByAbstraction.html">Illustration by Martin Fowler</a>
+                </p>
+            </section>
+            <section>
+                <a href="https://codecoolture.com/blog/branch-by-abstraction-react/">React Example</a>
+            </section>
+            <section>
+                <h3>NestJs Example</h3>
+            </section>
         </section>
     </div>
 </div>
