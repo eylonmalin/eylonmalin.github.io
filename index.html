@@ -123,7 +123,7 @@ function getCurrentLocation() {
                 <h1>Branch By Abstraction</h1>
             </section>
             <section>
-                <h3>Branch By Abstraction description</h3>
+                <h3>Branch By Abstraction definition</h3>
                 <p>
                     "Branch by Abstraction" is a technique for making a large-scale change to a software system in
                     gradual way that allows you to release the system regularly while the change is still in-progress.
@@ -177,6 +177,63 @@ function getCurrentLocation() {
                     <li>use <a href="https://emoji-css.afeld.me/">emoji-css.afeld.me</a>  for that</li>
                     <li>merge small changes by using branch by abstraction</li>
                 </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Feature Toggles</h1>
+            </section>
+            <section>
+                <h3>Feature Toggles definition</h3>
+                <p>
+                    A feature toggle (also feature flag) is a technique in software development that attempts to
+                    provide an alternative to maintaining multiple branches in source code (known as feature branches),
+                    such that a software feature can be tested even before it is completed and ready for release.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/Feature_toggle">Wikipedia</a>
+            </section>
+            <section>
+                <h3>Feature Toggles definition - cont</h3>
+                <p>A feature toggle is used to hide, enable or disable the feature during runtime.
+                For example, during the development process, a developer can enable the feature for testing and disable it for other users.</p>
+                <a href="https://en.wikipedia.org/wiki/Feature_toggle">Wikipedia</a>
+            </section>
+            <section>
+                <h3>Feature Toggles alternate definition</h3>
+                <p>A if statement in the code that wrap the feature's code</p>
+                <a>Eylon Malin</a>
+            </section>
+            <section>
+                <h3>Feature Toggles benefits</h3>
+                <ul>
+                    <li>Merge “Half Baked” Features / small commits</li>
+                    <li>Agility of Delivering Feature</li>
+                    <li>Test in CI from First Day</li>
+                    <li>Early Feedback</li>
+                    <li>Experimental Features</li>
+                    <li>Handling Vague Release Program</li>
+                </ul>
+            </section>
+            <section>
+                <h3>new Feature (Toggle) Life cycle</h3>
+                <ul>
+                    <li>Instead of creating new feature branch create a new feature toggle</li>
+                    <li>Set the toggle state to off</li>
+                    <li>Merge the new toggle code to main branch</li>
+                    <li>Develop your code in small commits and merge it to main branch</li>
+                </ul>
+            </section>
+            <section>
+                <h3>new Feature (Toggle) Life cycle - cont</h3>
+                <ul>
+                    <li>Once the feature is ready enough, enable the toggle in CI / test env</li>
+                    <li>Once the feature is completely ready and the code is running in production - enable the toggle in production</li>
+                    <li>One the clients are happy with the feature, remove the toggle from code and from management tool</li>
+                </ul>
+            </section>
+            <section>
+                <h3>new Feature (Toggle) Life cycle</h3>
+                <img src="./assets/feature_life_cycle.jpg">
             </section>
         </section>
     </div>
