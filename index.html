@@ -93,8 +93,27 @@
                 </ul>
             </section>
             <section>
-                <h3>Top down / Bottom up</h3>
+                <h3>Top Down / Bottom Up</h3>
                 <img src="./assets/top_down_bottom_up.jpg">
+            </section>
+            <section>
+                <h3>Use latest city weather - Top Down</h3>
+                <ul>
+                    <li>Introduce FavoritesService with set/get last city</li>
+                    <li>Use favorite service in WeatherService</li>
+                    <li>(controller level - test that validate the functionality)</li>
+                    <li>Change FE to consume weather REST API without city upon loading</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Use latest city weather - Bottom Up</h3>
+                <ul>
+                    <li>Change FE to consume weather REST API without city upon loading</li>
+                    <li>Controller level - support REST API without city - return last city</li>
+                    <li>Move last city functionality down to WeatherService</li>
+                    <li>Introduce FavoritesService with set/get last city</li>
+                    <li>Use favorite service in WeatherService for get/set the last city</li>
+                </ul>
             </section>
         </section>
         <section>
